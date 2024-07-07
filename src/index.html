@@ -114,15 +114,16 @@
 						и получите подарок
 					</div>
 
-					<input type="text" placeholder="Ваше имя и фамилия" class="hero-form__input">
-					<input type="tel" placeholder="Ваш номер телефона" class="hero-form__input">
-					<input type="email" placeholder="Ваш email" class="hero-form__input">
+					<input id="form-name" type="text" placeholder="Ваше имя и фамилия" class="hero-form__input">
+					<input id="form-phone" type="tel" placeholder="Ваш номер телефона" class="hero-form__input">
+					<input id="form-email" type="email" placeholder="Ваш email" class="hero-form__input">
 
-					<button class="hero-form__btn">Записаться бесплатно</button>
+					<button type="submit" class="hero-form__btn">Записаться бесплатно</button>
 					<div class="hero-form__agree">
 						Нажимая на кнопку я согашаюсь 
 						<a href="#">c политикой конфидециальности</a>
 					</div>
+					<div id="form-error" style="color: red; display: none;"></div>
 				</form>
 
 				<div class="hero-items hero-items--mob">
@@ -159,7 +160,16 @@
 	</section>
 
 
-    
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+			(function(){
+			emailjs.init({
+				publicKey: "p4bHp6kJih_mNHSde",
+			});
+			})();
+		</script>
     <script src="js/script.js"></script>
 </body>
 </html>
